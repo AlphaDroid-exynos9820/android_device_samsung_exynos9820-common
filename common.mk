@@ -163,6 +163,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     KProfiles
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung
+
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
