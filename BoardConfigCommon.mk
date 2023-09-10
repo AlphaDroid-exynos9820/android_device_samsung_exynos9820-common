@@ -97,6 +97,10 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
+## Memory allocator
+MALLOC_SVELTE := true
+MALLOC_SVELTE_FOR_LIBC32 := true
+
 ## Partitions
 BOARD_CACHEIMAGE_PARTITION_SIZE := 629145600
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
@@ -114,9 +118,6 @@ include hardware/samsung_slsi-linaro/config/BoardConfig9820.mk
 ## Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
-
-## Memory allocator
-PRODUCT_USE_SCUDO := true
 
 ## Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
